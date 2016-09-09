@@ -1,0 +1,40 @@
+---
+title: "Second R Markdown Assignment"
+author: "Lindsey Tuck"
+date: "September 9th, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="")
+Poinsettias <- read.csv("~/Downloads/Poinsettias.csv")
+```
+
+In a previous video I showed you how to read in data and update to GitHub.  I want you take the data on Poinsettias provided.  I want you to explore the data, creating tables and graphics and write up a descriptive report about your observations.  Your report should include the following:  
+
+- a table summarizing the data with a caption
+```
+table(Poinsettias$color)
+Summary <- table(Poinsettias$color)
+Summary
+```
+- a colorful graphic summarizing the data with a caption
+```
+colors = c("red", "yellow", "green", "violet", "orange", "blue", "pink", "cyan") 
+
+barplot(Summary)
+graph<- barplot(Summary, col= colors)
+graph
+
+
+```
+- summary statistics and information imbeded into the text via R code (e.g. `r `)
+```
+summary(Poinsettias)
+```
+
+**Note:** I did not show you how to do everything in this assignment in a video, but the R Markdown lesson page and a quick google search will help you do the above.  
+
+The final assignment and data set should be uploaded into a repository on your GitHub account.  You will submit a link to the repository name as your final assigment.  
+
+
